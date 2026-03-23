@@ -48,6 +48,26 @@ const Header: React.FC = () => {
   );
 };
 
+const Marquee: React.FC = () => {
+  const items = ['UX DESIGN', 'PRODUCT DESIGN', 'INTERACTION', 'BRANDING', 'SPATIAL DESIGN', 'FIGMA', 'PROTOTYPING', 'USER RESEARCH'];
+  const repeated = [...items, ...items];
+  return (
+    <div className="relative overflow-hidden w-full border-t border-b border-zinc-100 py-3">
+      <motion.div
+        className="flex gap-12 whitespace-nowrap"
+        animate={{ x: ['0%', '-50%'] }}
+        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+      >
+        {repeated.map((item, i) => (
+          <span key={i} className="text-[11px] font-normal tracking-[0.2em] text-zinc-400 shrink-0">
+            {item} <span className="text-zinc-200 mx-3">·</span>
+          </span>
+        ))}
+      </motion.div>
+    </div>
+  );
+};
+
 const Hero: React.FC = () => {
   const heroRef = React.useRef<HTMLElement>(null);
   const [mouse, setMouse] = React.useState({ x: 0.5, y: 0.5 });
@@ -62,113 +82,125 @@ const Hero: React.FC = () => {
     });
   };
 
-  const words = ['YI', 'NAEUI'];
-
   return (
     <section
       ref={heroRef}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="relative pt-40 pb-20 px-6 md:px-12 flex flex-col items-center text-center overflow-hidden min-h-[60vh] justify-center"
+      className="relative overflow-hidden"
     >
       {/* Aurora blobs */}
       <motion.div
         className="absolute pointer-events-none"
-        animate={{ x: mouse.x * 80 - 40, y: mouse.y * 60 - 30 }}
-        transition={{ type: 'spring', stiffness: 40, damping: 20 }}
+        animate={{ x: mouse.x * 60 - 30, y: mouse.y * 40 - 20 }}
+        transition={{ type: 'spring', stiffness: 30, damping: 25 }}
         style={{
-          width: 600, height: 600,
-          top: '50%', left: '50%',
-          marginLeft: -300, marginTop: -300,
-          background: 'radial-gradient(ellipse, rgba(200,190,255,0.35) 0%, transparent 70%)',
-          filter: 'blur(60px)',
+          width: 700, height: 700,
+          top: '10%', left: '30%',
+          background: 'radial-gradient(ellipse, rgba(195,185,255,0.3) 0%, transparent 65%)',
+          filter: 'blur(80px)',
         }}
       />
       <motion.div
         className="absolute pointer-events-none"
-        animate={{
-          x: [0, 30, -20, 0],
-          y: [0, -20, 30, 0],
-        }}
-        transition={{ duration: 12, repeat: Infinity, ease: 'easeInOut' }}
+        animate={{ x: [0, 40, -30, 0], y: [0, -30, 20, 0] }}
+        transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
         style={{
-          width: 400, height: 400,
-          top: '20%', left: '15%',
-          background: 'radial-gradient(ellipse, rgba(180,230,220,0.28) 0%, transparent 70%)',
-          filter: 'blur(50px)',
+          width: 500, height: 500,
+          top: '0%', left: '-5%',
+          background: 'radial-gradient(ellipse, rgba(170,235,215,0.22) 0%, transparent 65%)',
+          filter: 'blur(70px)',
         }}
       />
       <motion.div
         className="absolute pointer-events-none"
-        animate={{
-          x: [0, -25, 15, 0],
-          y: [0, 20, -15, 0],
-        }}
-        transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+        animate={{ x: [0, -30, 20, 0], y: [0, 25, -20, 0] }}
+        transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
         style={{
-          width: 350, height: 350,
-          top: '30%', right: '10%',
-          background: 'radial-gradient(ellipse, rgba(255,210,190,0.25) 0%, transparent 70%)',
-          filter: 'blur(50px)',
+          width: 450, height: 450,
+          top: '20%', right: '0%',
+          background: 'radial-gradient(ellipse, rgba(255,205,185,0.2) 0%, transparent 65%)',
+          filter: 'blur(70px)',
         }}
       />
-
       {/* Cursor glow */}
       <motion.div
         className="absolute pointer-events-none"
-        animate={{
-          opacity: hovered ? 1 : 0,
-          left: `${mouse.x * 100}%`,
-          top: `${mouse.y * 100}%`,
-        }}
-        transition={{ opacity: { duration: 0.3 }, left: { type: 'spring', stiffness: 200, damping: 30 }, top: { type: 'spring', stiffness: 200, damping: 30 } }}
-        style={{
-          width: 300, height: 300,
-          marginLeft: -150, marginTop: -150,
-          background: 'radial-gradient(circle, rgba(150,130,255,0.12) 0%, transparent 70%)',
-          filter: 'blur(30px)',
-        }}
+        animate={{ opacity: hovered ? 1 : 0, left: `${mouse.x * 100}%`, top: `${mouse.y * 100}%` }}
+        transition={{ opacity: { duration: 0.4 }, left: { type: 'spring', stiffness: 150, damping: 25 }, top: { type: 'spring', stiffness: 150, damping: 25 } }}
+        style={{ width: 400, height: 400, marginLeft: -200, marginTop: -200, background: 'radial-gradient(circle, rgba(140,120,255,0.1) 0%, transparent 70%)', filter: 'blur(40px)' }}
       />
 
-      {/* Title */}
-      <h1 className="relative z-10 text-[80px] md:text-[120px] font-bold tracking-tight leading-none mb-10 flex gap-6">
-        {words.map((word, wi) => (
-          <span key={wi} className="overflow-hidden inline-block">
-            <motion.span
-              className="inline-block"
-              initial={{ y: '110%', opacity: 0 }}
-              animate={{ y: 0, opacity: 1 }}
-              transition={{ duration: 0.9, delay: wi * 0.15 + 0.2, ease: [0.16, 1, 0.3, 1] }}
-            >
-              {word}
-            </motion.span>
-          </span>
-        ))}
-      </h1>
-
-      {/* Subtitle */}
-      <motion.p
-        className="relative z-10 text-2xl md:text-3xl font-normal text-[#888888]"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1, delay: 0.7, ease: [0.16, 1, 0.3, 1] }}
-      >
-        흐름과 맥락으로 해결하는 디자이너
-      </motion.p>
-
-      {/* Scroll indicator */}
+      {/* 상단 메타 */}
       <motion.div
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.4, duration: 1 }}
+        className="relative z-10 flex justify-between items-center px-6 md:px-12 pt-32 pb-12 text-[11px] font-normal tracking-[0.2em] text-zinc-400 uppercase"
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.1 }}
       >
+        <span>Seoul, KR · 2026</span>
+        <span>Experience Designer</span>
+      </motion.div>
+
+      {/* 메인 타이틀 — 에디토리얼 레이아웃 */}
+      <div className="relative z-10 px-6 md:px-12 pb-8">
+        {/* NAEUI — 왼쪽 정렬, 풀 너비 */}
+        <div className="overflow-hidden">
+          <motion.h1
+            className="text-[18vw] md:text-[16vw] font-bold tracking-[-0.02em] leading-[0.88] text-black"
+            initial={{ y: '105%' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
+          >
+            NAEUI
+          </motion.h1>
+        </div>
+
+        {/* YI — 오른쪽 + 작은 배지 */}
+        <div className="overflow-hidden flex items-end justify-between">
+          <motion.div
+            className="text-[11px] font-normal tracking-[0.15em] text-zinc-400 uppercase pb-3 md:pb-5"
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          >
+            UX · UI · Spatial
+          </motion.div>
+          <motion.h1
+            className="text-[18vw] md:text-[16vw] font-bold tracking-[-0.02em] leading-[0.88] text-black"
+            initial={{ y: '105%' }}
+            animate={{ y: 0 }}
+            transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
+          >
+            YI
+          </motion.h1>
+        </div>
+      </div>
+
+      {/* 마퀴 스트립 */}
+      <motion.div
+        initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.9, duration: 0.8 }}
+      >
+        <Marquee />
+      </motion.div>
+
+      {/* 하단 한 줄 */}
+      <motion.div
+        className="relative z-10 flex justify-between items-end px-6 md:px-12 py-10"
+        initial={{ opacity: 0, y: 16 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.9, delay: 1.1, ease: [0.16, 1, 0.3, 1] }}
+      >
+        <p className="text-base md:text-lg font-normal text-[#888888] max-w-sm leading-relaxed">
+          복잡한 것을 명확하게,<br />경험으로 설계합니다.
+        </p>
         <motion.div
-          className="w-[1px] h-12 bg-zinc-300 origin-top"
-          animate={{ scaleY: [0, 1, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
-        />
+          className="flex flex-col items-center gap-2 text-zinc-300"
+          animate={{ y: [0, 6, 0] }}
+          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
+        >
+          <span className="text-[10px] tracking-[0.2em] uppercase font-normal">Scroll</span>
+          <div className="w-[1px] h-10 bg-zinc-200" />
+        </motion.div>
       </motion.div>
     </section>
   );
