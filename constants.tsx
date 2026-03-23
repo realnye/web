@@ -1,116 +1,81 @@
 import { Project, ProjectCategory, Experience, DesignStack } from './types';
 
 export const PROJECTS: Project[] = [
-  // Category 1. UX/UI Design
   {
-    id: 'ux-1',
+    id: 'housewith',
     category: ProjectCategory.UXUI,
-    title: '[Do-It] 룸메이트 매칭 서비스',
-    role: 'UX기획·UI시스템',
-    keyPoints: '사용자 피드백 기반 UX 개선',
+    title: 'Housewith',
+    role: 'PM · Product Designer',
+    keyPoints: '룸메이트 매칭 플랫폼',
     link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?q=80&w=800&auto=format&fit=crop'
+    imageUrl: 'housewith.png', // 룸메이트 매칭 플랫폼 이미지
+    description: '잘 맞는 룸메를 위한 기숙사 룸메이트 매칭 플랫폼입니다. 정보 부족과 판단의 어려움을 해결하여 사용자가 직접 탐색하고 선택할 수 있는 구조를 제공합니다.',
+    details: [
+      '사용자 성향 설문 기반의 데이터화 및 간결한 온보딩 시스템 설계',
+      '조건 필터 기반 검색 기능 및 통일된 양식의 프로필 구조 제공',
+      '방장/멤버 관점에 맞춘 정보 분리 및 매칭 프로세스 관리 시스템',
+      '상호 간 매칭 신뢰도를 높이는 피드백 및 활동 내역 관리 시스템 구축'
+    ]
   },
   {
-    id: 'ux-2',
+    id: 'dental-u',
     category: ProjectCategory.UXUI,
-    title: '[Do-It] 일정 루틴 관리 앱',
-    role: 'GUI 디자인',
-    keyPoints: '유저 데이터 기반 인터렉션 설계',
+    title: 'Dental U (덴탈유)',
+    role: 'UXUI Designer',
+    keyPoints: '내 손안의 치아관리 서비스',
     link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?q=80&w=800&auto=format&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1629909608135-ca29ed974bb9?q=80&w=800&auto=format&fit=crop', // Dental theme
+    subImages: [
+      'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop', // IA/Medical
+      'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800&auto=format&fit=crop'  // Home/App
+    ],
+    description: '의료진과 환자 간의 상호작용에 대한 해결책을 제시하는 치아 관리 서비스입니다. 환자의 불안감을 완화하고 진료 전 필요한 정보를 한눈에 제공합니다.',
+    details: [
+      '환자 모니터링 개선 및 긍정적인 진료 경험을 위한 정보 구조(IA) 설계',
+      '필수 정보만을 선별하여 구성한 홈 화면 및 실시간 대기 현황 확인 기능',
+      '진료 내역 상세 확인 및 시각화된 만족도 조사 시스템 구현',
+      '시술 과정 브리핑 및 진료 방식에 대한 사전 지식 제공 가이드 구축'
+    ]
   },
   {
-    id: 'ux-3',
+    id: 'routie',
     category: ProjectCategory.UXUI,
-    title: '[SDP] 유휴공간 텃밭 서비스',
-    role: 'UX 리서치·기획',
-    keyPoints: '사회적 가치와 UX의 결합',
+    title: 'Routie (루티)',
+    role: 'PM · Product Designer',
+    keyPoints: '대학생활 일정 루틴 관리',
     link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1466692476868-aef1dfb1e735?q=80&w=800&auto=format&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop', // Planner theme
+    subImages: [
+      'https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=800&auto=format&fit=crop', // Visual Identity
+      'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop'  // Calendar
+    ],
+    description: '학업, 대외활동, 자기관리를 병행하는 대학생들을 위한 일정 및 루틴 관리 솔루션입니다. 효율적이고 체계적인 시간 관리를 제안합니다.',
+    details: [
+      '루틴과 일정 탭 전환을 통한 시간대별 할 일 및 고정 스케줄 통합 관리',
+      '게이미피케이션 요소를 활용한 캐릭터 성장 시스템 및 동기부여 설계',
+      '매달 루틴 달성도와 시간대별 루틴을 한눈에 확인하는 캘린더 인터페이스',
+      '사용자 활동 데이터 기반의 피드백 대시보드 및 커스터마이징 기능'
+    ]
   },
   {
-    id: 'ux-4',
+    id: 'furzzle',
     category: ProjectCategory.UXUI,
-    title: '[CJINV] 블록체인 프로덕트',
-    role: 'UI/UX 디자인',
-    keyPoints: '복잡한 기술의 시각적 단순화',
+    title: 'Furzzle (퍼즐)',
+    role: 'UXUI Designer',
+    keyPoints: '습관 형성 및 관리 서비스',
     link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1639762681485-074b7f938ba0?q=80&w=800&auto=format&fit=crop'
-  },
-  // Category 2. Graphic Design
-  {
-    id: 'gr-1',
-    category: ProjectCategory.Graphic,
-    title: '[SDP] 정기 전시 브랜딩',
-    role: 'BX 디자인',
-    keyPoints: '컨셉의 시각적 메타포 구현',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'gr-2',
-    category: ProjectCategory.Graphic,
-    title: '[MUH] 브랜드 캠페인',
-    role: '마케팅 디자인',
-    keyPoints: '타겟 맞춤형 비주얼 커뮤니케이션',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1558655146-d09347e92766?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'gr-3',
-    category: ProjectCategory.Graphic,
-    title: '[Personal] 아트워크 시리즈',
-    role: '그래픽 디자인',
-    keyPoints: '타이포그래피와 레이아웃 실험',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'gr-4',
-    category: ProjectCategory.Graphic,
-    title: '[Brand] 아이덴티티 구축',
-    role: 'CI/BI 디자인',
-    keyPoints: '브랜드 가이드라인 수립',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1626785774573-4b799315345d?q=80&w=800&auto=format&fit=crop'
-  },
-  // Category 3. Space Design
-  {
-    id: 'sp-1',
-    category: ProjectCategory.Space,
-    title: '[Spatial] 경험 중심 팝업스토어',
-    role: '공간 기획·3D',
-    keyPoints: '사용자 동선 시뮬레이션',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'sp-2',
-    category: ProjectCategory.Space,
-    title: '[Concept] 도심 속 휴식 공간',
-    role: '모델링·렌더링',
-    keyPoints: '물리적 환경의 UX 설계',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'sp-3',
-    category: ProjectCategory.Space,
-    title: '[Exhibition] 전시 공간 레이아웃',
-    role: '공간 연출',
-    keyPoints: '매체와 공간의 유기적 연결',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1531058020387-3be344556be6?q=80&w=800&auto=format&fit=crop'
-  },
-  {
-    id: 'sp-4',
-    category: ProjectCategory.Space,
-    title: '[Interior] 미니멀리즘 오피스',
-    role: '공간 설계',
-    keyPoints: '효율성과 심미성의 균형',
-    link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=800&auto=format&fit=crop'
+    imageUrl: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=800&auto=format&fit=crop', // Green/Habit theme
+    subImages: [
+      'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop', // Define/Habit
+      'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop'  // Main/Activity
+    ],
+    description: '간편한 기록 방식과 개인 맞춤형 알림으로 지속 가능한 습관 형성을 돕는 서비스입니다. 개인화된 콘텐츠 제공을 통해 습관 유지를 유도합니다.',
+    details: [
+      '심층 인터뷰를 통한 페인포인트 분석 및 "개인화된 콘텐츠 제공" 솔루션 도출',
+      '주간/월간 습관 트래킹 및 달성률 시각화를 통한 성취감 고취',
+      '맞춤 필터 기반의 운동 영상 큐레이션 및 보이스 코칭 피트니스 기능',
+      '작은 성공을 유도하는 챌린지 시스템 및 활동 내역 관리 인터페이스 설계'
+    ]
   }
 ];
 

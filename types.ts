@@ -13,6 +13,9 @@ export interface Project {
   keyPoints: string;
   link: string;
   imageUrl: string;
+  subImages?: string[];
+  description?: string;
+  details?: string[];
 }
 
 export interface Experience {
