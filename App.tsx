@@ -49,7 +49,7 @@ const Header: React.FC = () => {
 };
 
 const Marquee: React.FC = () => {
-  const items = ['UX DESIGN', 'PRODUCT DESIGN', 'INTERACTION', 'BRANDING', 'SPATIAL DESIGN', 'FIGMA', 'PROTOTYPING', 'USER RESEARCH'];
+  const items = ['Brand Identity', 'UXUI Design', 'Wireframing & Prototyping'];
   const repeated = [...items, ...items];
   return (
     <div className="relative overflow-hidden w-full border-t border-b border-zinc-100 py-3">
@@ -137,8 +137,8 @@ const Hero: React.FC = () => {
         className="relative z-10 flex justify-between items-center px-6 md:px-12 pt-32 pb-12 text-[11px] font-normal tracking-[0.2em] text-zinc-400 uppercase"
         initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 0.1 }}
       >
-        <span>Seoul, KR · 2026</span>
-        <span>Experience Designer</span>
+        <span>Seoul, 2000</span>
+        <span>UXUI Designer</span>
       </motion.div>
 
       {/* 메인 타이틀 — 에디토리얼 레이아웃 */}
