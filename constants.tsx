@@ -8,9 +8,10 @@ export const PROJECTS: Project[] = [
     role: 'PM · Product Designer',
     keyPoints: '룸메이트 매칭 플랫폼',
     link: '#',
-    imageUrl: 'housewith_1.png', // 룸메이트 매칭 플랫폼 이미지
-     subImages: [
-      'housewith_1_1.png', // IA/Medical
+    imageUrl: '/housewith_1.png',
+    subImages: [
+      '/housewith_1_1.png',
+    ],
     description: '잘 맞는 룸메를 위한 기숙사 룸메이트 매칭 플랫폼입니다. 정보 부족과 판단의 어려움을 해결하여 사용자가 직접 탐색하고 선택할 수 있는 구조를 제공합니다.',
     details: [
       '사용자 성향 설문 기반의 데이터화 및 간결한 온보딩 시스템 설계',
@@ -26,9 +27,9 @@ export const PROJECTS: Project[] = [
     role: 'UXUI Designer',
     keyPoints: '내 손안의 치아관리 서비스',
     link: '#',
-    imageUrl: 'dentalu_2.png', // Dental theme
+    imageUrl: '/dentalu_2.png',
     subImages: [
-      'dentalu_2_1.png'
+      '/dentalu_2_1.png'
     ],
     description: '의료진과 환자 간의 상호작용에 대한 해결책을 제시하는 치아 관리 서비스입니다. 환자의 불안감을 완화하고 진료 전 필요한 정보를 한눈에 제공합니다.',
     details: [
@@ -45,9 +46,9 @@ export const PROJECTS: Project[] = [
     role: 'PM · Product Designer',
     keyPoints: '대학생활 일정 루틴 관리',
     link: '#',
-    imageUrl: 'routie_3.png', // Planner theme
+    imageUrl: '/routie_3.png',
     subImages: [
-      'routie_3_1.png'
+      '/routie_3_1.png'
     ],
     description: '학업, 대외활동, 자기관리를 병행하는 대학생들을 위한 일정 및 루틴 관리 솔루션입니다. 효율적이고 체계적인 시간 관리를 제안합니다.',
     details: [
@@ -64,9 +65,9 @@ export const PROJECTS: Project[] = [
     role: 'UXUI Designer',
     keyPoints: '습관 형성 및 관리 서비스',
     link: '#',
-    imageUrl: 'furzzle_4.png', // Green/Habit theme
+    imageUrl: '/furzzle_4.png',
     subImages: [
-      'furzzle_4_1.png'
+      '/furzzle_4_1.png'
     ],
     description: '간편한 기록 방식과 개인 맞춤형 알림으로 지속 가능한 습관 형성을 돕는 서비스입니다. 개인화된 콘텐츠 제공을 통해 습관 유지를 유도합니다.',
     details: [
