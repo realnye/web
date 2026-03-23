@@ -50,12 +50,12 @@ const Header: React.FC = () => {
 
 const Marquee: React.FC = () => {
   const items = ['Brand Identity', 'UXUI Design', 'Wireframing & Prototyping'];
-  const repeated = [...items, ...items];
+  const repeated = [...items, ...items, ...items, ...items, ...items, ...items];
   return (
     <div className="relative overflow-hidden w-full border-t border-b border-zinc-100 py-3">
       <motion.div
         className="flex gap-12 whitespace-nowrap"
-        animate={{ x: ['0%', '-50%'] }}
+        animate={{ x: ['0%', '-16.666%'] }}
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         {repeated.map((item, i) => (
