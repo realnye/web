@@ -253,14 +253,14 @@ const ProjectDetail: React.FC<{
                     </div>
                   </div>
 
-                    <div className="space-y-8">
+                  <div className="space-y-8">
                     <div>
                       <h4 className="text-detail text-zinc-300 mb-4">Overview</h4>
                       <p className="text-xl text-zinc-800 font-bold leading-relaxed">
                         {project.description}
                       </p>
                     </div>
-                    
+
                     <div>
                       <h4 className="text-detail text-zinc-300 mb-4">Key Details</h4>
                       <ul className="space-y-3">
@@ -275,29 +275,30 @@ const ProjectDetail: React.FC<{
                   </div>
                 </div>
 
-                <div className="space-y-8">
-                  <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
-                    <img
-                      src={project.imageUrl}
-                      alt={project.title}
-                      className="w-full h-full object-contain"
-                      referrerPolicy="no-referrer"
-                    />
-                  </div>
-                  <div className="flex flex-col gap-8">
-                    {project.subImages?.map((img: string, i: number) => (
-                      <div key={i} className="w-full max-w-[1200px] mx-auto rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
-                        <img
-                          src={img}
-                          alt={`Detail ${i + 1}`}
-                          className="w-full h-auto object-contain"
-                          referrerPolicy="no-referrer"
-                        />
-                      </div>
-                    ))}
-                  </div>
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full h-full object-contain"
+                    referrerPolicy="no-referrer"
+                  />
                 </div>
               </div>
+
+              {project.subImages && project.subImages.length > 0 && (
+                <div className="flex flex-col gap-8 mt-16">
+                  {project.subImages.map((img: string, i: number) => (
+                    <div key={i} className="w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
+                      <img
+                        src={img}
+                        alt={`Detail ${i + 1}`}
+                        className="w-full h-auto object-contain"
+                        referrerPolicy="no-referrer"
+                      />
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
           </motion.div>
         </>
