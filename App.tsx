@@ -168,66 +168,96 @@ const ProjectDetail: React.FC<{
   );
 };
 
+// 공통 프로젝트 카드
+const ProjectCard: React.FC<{ project: any; onClick: () => void; className?: string }> = ({ project, onClick, className }) => (
+  <motion.div
+    onClick={onClick}
+    whileHover={{ y: -6 }}
+    className={`group relative cursor-pointer ${className ?? ''}`}
+  >
+    <div className="relative aspect-[4/5] overflow-hidden bg-zinc-50 rounded-2xl mb-5 border border-zinc-100">
+      <img
+        src={project.imageUrl}
+        alt={project.title}
+        className="w-full h-full object-contain project-thumbnail"
+        referrerPolicy="no-referrer"
+      />
+      <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
+        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl">
+          <ArrowUpRight className="text-black" size={24} />
+        </div>
+      </div>
+    </div>
+    <div className="border-l-2 border-zinc-100 pl-5 group-hover:border-black transition-colors duration-500">
+      <h3 className="text-xl font-bold mb-2 leading-tight">{project.title}</h3>
+      <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.2em]">{project.role}</p>
+      <p className="text-[10px] text-zinc-300 font-medium uppercase tracking-widest">{project.keyPoints}</p>
+    </div>
+  </motion.div>
+);
+
 const Work: React.FC<{ onSelectProject: (project: any) => void }> = ({ onSelectProject }) => {
   const targetRef = React.useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: targetRef,
-  });
+  const [isMobile, setIsMobile] = React.useState(false);
 
-  // Calculate horizontal scroll distance based on number of projects
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", `-${Math.max(0, (PROJECTS.length * 498 - window.innerWidth + 100) / (PROJECTS.length * 498) * 100)}%`]);
+  React.useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < 768);
+    check();
+    window.addEventListener('resize', check);
+    return () => window.removeEventListener('resize', check);
+  }, []);
 
+  const { scrollYProgress } = useScroll({ target: targetRef });
+  const x = useTransform(
+    scrollYProgress,
+    [0, 1],
+    ['0%', `-${Math.max(0, (PROJECTS.length * 498 - (typeof window !== 'undefined' ? window.innerWidth : 1440) + 100) / (PROJECTS.length * 498) * 100)}%`]
+  );
+
+  const sectionHeader = (
+    <div className="w-full px-6 md:px-12 mb-10">
+      <p className="text-detail text-zinc-400">WORK</p>
+    </div>
+  );
+
+  // 모바일: 세로 2열 그리드
+  if (isMobile) {
+    return (
+      <section className="border-t border-zinc-100 py-20 bg-[#FFFFFE]">
+        {sectionHeader}
+        <div className="px-6 grid grid-cols-2 gap-6">
+          {PROJECTS.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              onClick={() => onSelectProject(project)}
+            />
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  // 데스크탑: 가로 스크롤 (스크롤 연동)
   return (
     <section ref={targetRef} className="relative h-[300vh] border-t border-zinc-100">
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden bg-[#FFFFFE]">
-        <div className="max-w-[1800px] mx-auto w-full px-6 md:px-12 mb-12">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-12">
-            <div>
-              <p className="text-detail text-zinc-400 mb-8">WORK</p>
-            </div>
-          </div>
-        </div>
-
+        {sectionHeader}
         <div className="relative">
-          <motion.div style={{ x }} className="flex gap-12 px-6 md:px-12">
+          <motion.div style={{ x }} className="flex gap-12 px-12">
             {PROJECTS.map((project) => (
-              <motion.div 
-                key={project.id} 
+              <ProjectCard
+                key={project.id}
+                project={project}
                 onClick={() => onSelectProject(project)}
-                whileHover={{ y: -10 }}
-                className="group relative flex-shrink-0 w-[85vw] md:w-[450px] cursor-pointer"
-              >
-                <div className="relative aspect-[4/5] overflow-hidden bg-zinc-50 rounded-2xl mb-8 border border-zinc-100">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-contain project-thumbnail"
-                    referrerPolicy="no-referrer"
-                  />
-                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
-                     <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center scale-0 group-hover:scale-100 transition-transform duration-500 shadow-xl">
-                        <ArrowUpRight className="text-black" size={32} />
-                     </div>
-                  </div>
-                </div>
-                <div className="flex justify-between items-start border-l-2 border-zinc-100 pl-6 group-hover:border-black transition-colors duration-500">
-                  <div>
-                    <h3 className="text-2xl font-bold mb-3 leading-tight group-hover:text-zinc-800 transition-colors">{project.title}</h3>
-                    <div className="flex flex-col gap-1">
-                      <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.2em]">{project.role}</p>
-                      <p className="text-[10px] text-zinc-300 font-medium uppercase tracking-widest">{project.keyPoints}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
+                className="flex-shrink-0 w-[450px]"
+              />
             ))}
           </motion.div>
         </div>
-        
-        {/* Scroll Progress Bar */}
-        <div className="absolute bottom-12 left-6 md:left-12 right-6 md:right-12 h-[2px] bg-zinc-100 rounded-full overflow-hidden">
-          <motion.div 
-            style={{ scaleX: scrollYProgress }} 
+        <div className="absolute bottom-12 left-12 right-12 h-[2px] bg-zinc-100 rounded-full overflow-hidden">
+          <motion.div
+            style={{ scaleX: scrollYProgress }}
             className="absolute top-0 left-0 h-full w-full bg-black origin-left"
           />
         </div>
