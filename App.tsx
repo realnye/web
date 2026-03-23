@@ -56,7 +56,7 @@ const Marquee: React.FC = () => {
       <motion.div
         className="flex gap-12 whitespace-nowrap"
         animate={{ x: ['0%', '-50%'] }}
-        transition={{ duration: 25, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 0.5, repeat: Infinity, ease: 'linear' }}
       >
         {repeated.map((item, i) => (
           <span key={i} className="text-[11px] font-normal tracking-[0.2em] text-zinc-400 shrink-0">
@@ -155,16 +155,8 @@ const Hero: React.FC = () => {
           </motion.h1>
         </div>
 
-        {/* YI — 오른쪽 + 작은 배지 */}
-        <div className="overflow-hidden flex items-end justify-between">
-          <motion.div
-            className="text-[11px] font-normal tracking-[0.15em] text-zinc-400 uppercase pb-3 md:pb-5"
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.8, ease: [0.16, 1, 0.3, 1] }}
-          >
-            UX · UI · Spatial
-          </motion.div>
+        {/* YI — 오른쪽 */}
+        <div className="overflow-hidden flex items-end justify-end">
           <motion.h1
             className="text-[18vw] md:text-[16vw] font-bold tracking-[-0.02em] leading-[0.88] text-black"
             initial={{ y: '105%' }}
@@ -294,7 +286,7 @@ const ProjectDetail: React.FC<{
                   </div>
                   <div className="flex flex-col gap-8">
                     {project.subImages?.map((img: string, i: number) => (
-                      <div key={i} className="w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
+                      <div key={i} className="w-full max-w-[1048px] mx-auto rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
                         <img
                           src={img}
                           alt={`Detail ${i + 1}`}
