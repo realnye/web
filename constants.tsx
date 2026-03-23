@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
     role: 'UXUI Designer',
     keyPoints: '내 손안의 치아관리 서비스',
     link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1629909608135-ca29ed974bb9?q=80&w=800&auto=format&fit=crop', // Dental theme
+    imageUrl: 'dentalu_2.png', // Dental theme
     subImages: [
       'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop', // IA/Medical
       'https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=800&auto=format&fit=crop'  // Home/App
