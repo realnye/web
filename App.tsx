@@ -190,8 +190,8 @@ const ProjectCard: React.FC<{ project: any; onClick: () => void; className?: str
     </div>
     <div className="border-l-2 border-zinc-100 pl-5 group-hover:border-black transition-colors duration-500">
       <h3 className="text-xl font-bold mb-2 leading-tight">{project.title}</h3>
-      <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-[0.2em]">{project.role}</p>
-      <p className="text-[10px] text-zinc-300 font-medium uppercase tracking-widest">{project.keyPoints}</p>
+      <p className="text-[10px] text-zinc-400 font-normal uppercase tracking-[0.2em]">{project.role}</p>
+      <p className="text-[10px] font-normal uppercase tracking-widest" style={{ color: '#EFEFEF' }}>{project.keyPoints}</p>
     </div>
   </motion.div>
 );

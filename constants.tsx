@@ -23,7 +23,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'dental-u',
     category: ProjectCategory.UXUI,
-    title: 'Dental U (덴탈유)',
+    title: 'Dental U',
     role: 'UXUI Designer',
     keyPoints: '내 손안의 치아관리 서비스',
     link: '#',
@@ -42,7 +42,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'routie',
     category: ProjectCategory.UXUI,
-    title: 'Routie (루티)',
+    title: 'Routie',
     role: 'PM · Product Designer',
     keyPoints: '대학생활 일정 루틴 관리',
     link: '#',
@@ -61,7 +61,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'furzzle',
     category: ProjectCategory.UXUI,
-    title: 'Furzzle (퍼즐)',
+    title: 'Furzzle',
     role: 'UXUI Designer',
     keyPoints: '습관 형성 및 관리 서비스',
     link: '#',
