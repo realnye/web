@@ -191,7 +191,7 @@ const ProjectCard: React.FC<{ project: any; onClick: () => void; className?: str
     <div className="border-l-2 border-zinc-100 pl-5 group-hover:border-black transition-colors duration-500">
       <h3 className="text-xl font-bold mb-2 leading-tight">{project.title}</h3>
       <p className="text-[10px] text-zinc-400 font-normal uppercase tracking-[0.2em]">{project.role}</p>
-      <p className="text-[10px] font-normal uppercase tracking-widest" style={{ color: '#EFEFEF' }}>{project.keyPoints}</p>
+      <p className="text-[10px] text-zinc-400 font-normal uppercase tracking-widest">{project.keyPoints}</p>
     </div>
   </motion.div>
 );
@@ -268,12 +268,10 @@ const Work: React.FC<{ onSelectProject: (project: any) => void }> = ({ onSelectP
 
 const Footer = () => {
   return (
-    <footer className="pt-20 pb-12 px-6 bg-[#FFFFFE] border-t border-zinc-100">
-      <div className="max-w-[1800px] mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-zinc-100 gap-6">
-          <p className="text-detail text-zinc-400">© 2026 NAEUI YI. ALL RIGHTS RESERVED.</p>
-          <p className="text-detail text-zinc-400">DESIGN ARCHIVE</p>
-        </div>
+    <footer className="py-12 px-6 md:px-12 bg-[#FFFFFE] border-t border-zinc-100">
+      <div className="max-w-[1800px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+        <p className="text-sm font-normal tracking-tight text-zinc-400">©2026 YI NAEUI</p>
+        <p className="text-sm font-normal tracking-tight text-zinc-400">uxui design archive</p>
       </div>
     </footer>
   );
