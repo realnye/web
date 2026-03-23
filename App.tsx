@@ -56,7 +56,7 @@ const Marquee: React.FC = () => {
       <motion.div
         className="flex gap-12 whitespace-nowrap"
         animate={{ x: ['0%', '-50%'] }}
-        transition={{ duration: 0.5, repeat: Infinity, ease: 'linear' }}
+        transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         {repeated.map((item, i) => (
           <span key={i} className="text-[11px] font-normal tracking-[0.2em] text-zinc-400 shrink-0">
@@ -286,7 +286,7 @@ const ProjectDetail: React.FC<{
                   </div>
                   <div className="flex flex-col gap-8">
                     {project.subImages?.map((img: string, i: number) => (
-                      <div key={i} className="w-full max-w-[1048px] mx-auto rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
+                      <div key={i} className="w-full max-w-[1200px] mx-auto rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
                         <img
                           src={img}
                           alt={`Detail ${i + 1}`}
