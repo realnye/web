@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     role: 'PM · Product Designer',
     keyPoints: '룸메이트 매칭 플랫폼',
     link: '#',
-    imageUrl: 'housewith.png', // 룸메이트 매칭 플랫폼 이미지
+    imageUrl: 'housewith_1.png', // 룸메이트 매칭 플랫폼 이미지
     description: '잘 맞는 룸메를 위한 기숙사 룸메이트 매칭 플랫폼입니다. 정보 부족과 판단의 어려움을 해결하여 사용자가 직접 탐색하고 선택할 수 있는 구조를 제공합니다.',
     details: [
       '사용자 성향 설문 기반의 데이터화 및 간결한 온보딩 시스템 설계',
@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
     role: 'PM · Product Designer',
     keyPoints: '대학생활 일정 루틴 관리',
     link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop', // Planner theme
+    imageUrl: 'routie_3.png', // Planner theme
     subImages: [
       'https://images.unsplash.com/photo-1512314889357-e157c22f938d?q=80&w=800&auto=format&fit=crop', // Visual Identity
       'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800&auto=format&fit=crop'  // Calendar
@@ -64,7 +64,7 @@ export const PROJECTS: Project[] = [
     role: 'UXUI Designer',
     keyPoints: '습관 형성 및 관리 서비스',
     link: '#',
-    imageUrl: 'https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?q=80&w=800&auto=format&fit=crop', // Green/Habit theme
+    imageUrl: 'furzzle_4.png', // Green/Habit theme
     subImages: [
       'https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=800&auto=format&fit=crop', // Define/Habit
       'https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?q=80&w=800&auto=format&fit=crop'  // Main/Activity
