@@ -139,20 +139,20 @@ const ProjectDetail: React.FC<{
 
                 <div className="space-y-8">
                   <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
-                    <img 
-                      src={project.imageUrl} 
-                      alt={project.title} 
-                      className="w-full h-full object-cover"
+                    <img
+                      src={project.imageUrl}
+                      alt={project.title}
+                      className="w-full h-full object-contain"
                       referrerPolicy="no-referrer"
                     />
                   </div>
-                  <div className="grid grid-cols-2 gap-8">
+                  <div className="flex flex-col gap-8">
                     {project.subImages?.map((img: string, i: number) => (
-                      <div key={i} className="aspect-square rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
-                        <img 
-                          src={img} 
-                          alt={`Detail ${i + 1}`} 
-                          className="w-full h-full object-cover"
+                      <div key={i} className="w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
+                        <img
+                          src={img}
+                          alt={`Detail ${i + 1}`}
+                          className="w-full h-auto object-contain"
                           referrerPolicy="no-referrer"
                         />
                       </div>
@@ -198,10 +198,10 @@ const Work: React.FC<{ onSelectProject: (project: any) => void }> = ({ onSelectP
                 className="group relative flex-shrink-0 w-[85vw] md:w-[450px] cursor-pointer"
               >
                 <div className="relative aspect-[4/5] overflow-hidden bg-zinc-50 rounded-2xl mb-8 border border-zinc-100">
-                  <img 
-                    src={project.imageUrl} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover project-thumbnail" 
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="w-full h-full object-contain project-thumbnail"
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center backdrop-blur-[2px]">
