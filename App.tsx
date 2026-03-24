@@ -146,7 +146,8 @@ const Hero: React.FC = () => {
         {/* NAEUI — 왼쪽 정렬, 풀 너비 */}
         <div className="overflow-hidden">
           <motion.h1
-            className="text-[18vw] md:text-[16vw] font-bold tracking-[-0.02em] leading-[0.88] text-black"
+            className="text-[18vw] md:text-[16vw] tracking-[-0.02em] leading-[0.88] text-black"
+            style={{ fontFamily: "'HyundaiSansHead', sans-serif", fontWeight: 500 }}
             initial={{ y: '105%' }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -158,7 +159,8 @@ const Hero: React.FC = () => {
         {/* YI — 오른쪽 */}
         <div className="overflow-hidden flex items-end justify-end">
           <motion.h1
-            className="text-[18vw] md:text-[16vw] font-bold tracking-[-0.02em] leading-[0.88] text-black"
+            className="text-[18vw] md:text-[16vw] tracking-[-0.02em] leading-[0.88] text-black"
+            style={{ fontFamily: "'HyundaiSansHead', sans-serif", fontWeight: 500 }}
             initial={{ y: '105%' }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}

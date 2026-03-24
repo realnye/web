@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'HyundaiSansHead';
+  src: url('/fonts/HyundaiSansHeadOffice-Medium.woff2') format('woff2'),
+       url('/fonts/HyundaiSansHeadOffice-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @theme {
   --font-sans: "Helvetica", "Arial", sans-serif;
   --font-mono: "Helvetica", "Arial", sans-serif;
