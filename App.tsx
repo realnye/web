@@ -215,74 +215,72 @@ const ProjectDetail: React.FC<{
               <div className="w-12 h-1 bg-zinc-100 rounded-full" />
             </div>
 
-            <div className="max-w-[1200px] mx-auto px-6 pb-12 md:px-12 md:pb-20">
-              <button 
+            <div className="px-6 pb-12 md:px-12 md:pb-20">
+              <button
                 onClick={onClose}
                 className="absolute top-8 right-8 w-12 h-12 bg-zinc-50 rounded-full flex items-center justify-center hover:bg-zinc-100 transition-colors"
               >
                 <X size={24} className="text-black" />
               </button>
 
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-                <div className="space-y-12">
+              {/* 타이틀 + 역할 */}
+              <div className="mb-12">
+                <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-none mb-6 text-black">
+                  {project.title}
+                </h2>
+                <span className="px-4 py-2 bg-zinc-50 rounded-full text-xs font-medium tracking-wide border border-zinc-100 text-zinc-600">
+                  {project.role}
+                </span>
+              </div>
+
+              {/* Contribution + Overview + Key Details */}
+              <div className="flex flex-col gap-10 mb-16 max-w-2xl">
+                {project.contributions && project.contributions.length > 0 && (
                   <div>
-                    <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-none mb-8 text-black">
-                      {project.title}
-                    </h2>
-                    <div className="flex flex-wrap gap-4">
-                      <span className="px-4 py-2 bg-zinc-50 rounded-full text-xs font-medium tracking-wide border border-zinc-100 text-zinc-600">
-                        {project.role}
-                      </span>
+                    <h4 className="text-detail text-zinc-300 mb-3">Contribution</h4>
+                    <div className="flex flex-wrap gap-2">
+                      {project.contributions.map((c: string, i: number) => (
+                        <span key={i} className="px-3 py-1 border border-zinc-200 rounded-full text-[11px] tracking-[0.1em] text-zinc-500 uppercase">
+                          {c}
+                        </span>
+                      ))}
                     </div>
                   </div>
+                )}
 
-                  <div className="space-y-8">
-                    {project.contributions && project.contributions.length > 0 && (
-                      <div>
-                        <h4 className="text-detail text-zinc-300 mb-3">Contribution</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {project.contributions.map((c: string, i: number) => (
-                            <span key={i} className="px-3 py-1 border border-zinc-200 rounded-full text-[11px] tracking-[0.1em] text-zinc-500 uppercase">
-                              {c}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    <div>
-                      <h4 className="text-detail text-zinc-300 mb-4">Overview</h4>
-                      <p className="text-xl text-zinc-800 font-bold leading-relaxed">
-                        {project.description}
-                      </p>
-                    </div>
-
-                    <div>
-                      <h4 className="text-detail text-zinc-300 mb-4">Key Details</h4>
-                      <ul className="space-y-3">
-                        {project.details?.map((detail: string, i: number) => (
-                          <li key={i} className="text-zinc-500 leading-relaxed flex gap-3">
-                            <span className="text-zinc-300">•</span>
-                            {detail}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </div>
+                <div>
+                  <h4 className="text-detail text-zinc-300 mb-4">Overview</h4>
+                  <p className="text-xl text-zinc-800 font-bold leading-relaxed">
+                    {project.description}
+                  </p>
                 </div>
 
-                <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
-                  <img
-                    src={project.imageUrl}
-                    alt={project.title}
-                    className="w-full h-full object-contain"
-                    referrerPolicy="no-referrer"
-                  />
+                <div>
+                  <h4 className="text-detail text-zinc-300 mb-4">Key Details</h4>
+                  <ul className="space-y-3">
+                    {project.details?.map((detail: string, i: number) => (
+                      <li key={i} className="text-zinc-500 leading-relaxed flex gap-3">
+                        <span className="text-zinc-300">•</span>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
               </div>
 
+              {/* 메인 이미지 */}
+              <div className="w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100 mb-8">
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-auto object-contain"
+                  referrerPolicy="no-referrer"
+                />
+              </div>
+
+              {/* 서브 이미지 */}
               {project.subImages && project.subImages.length > 0 && (
-                <div className="flex flex-col gap-8 mt-16">
+                <div className="flex flex-col gap-8">
                   {project.subImages.map((img: string, i: number) => (
                     <div key={i} className="w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100">
                       <img
