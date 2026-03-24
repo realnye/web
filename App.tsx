@@ -208,7 +208,7 @@ const ProjectDetail: React.FC<{
             animate={{ y: 0 }}
             exit={{ y: '100%' }}
             transition={{ type: 'spring', damping: 25, stiffness: 200 }}
-            className="fixed bottom-0 left-0 right-0 z-[70] bg-white border-t border-zinc-100 rounded-t-[40px] max-h-[90vh] overflow-y-auto no-scrollbar font-hyundai"
+            className="fixed bottom-0 left-0 right-0 z-[70] bg-white border-t border-zinc-100 rounded-t-[40px] max-h-[95vh] overflow-y-auto no-scrollbar font-hyundai"
           >
             {/* Drag Handle Visual */}
             <div className="sticky top-0 left-0 right-0 h-8 flex items-center justify-center bg-white z-10">
