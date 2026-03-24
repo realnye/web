@@ -8,7 +8,7 @@ export const PROJECTS: Project[] = [
     role: 'PM · Product Designer',
     keyPoints: '룸메이트 매칭 플랫폼',
     link: '#',
-    imageUrl: '/Housewith_tn.png',
+    imageUrl: '/housewith_tn_v2.png',
     subImages: [
       '/housewith_1_1.png',
     ],
@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     role: 'UXUI Designer',
     keyPoints: '내 손안의 치아관리 서비스',
     link: '#',
-    imageUrl: '/Dentalu_tn.png',
+    imageUrl: '/dentalu_tn_v2.png',
     subImages: [
       '/dentalu_2_1.png'
     ],
@@ -48,7 +48,7 @@ export const PROJECTS: Project[] = [
     role: 'PM · Product Designer',
     keyPoints: '대학생활 일정 루틴 관리',
     link: '#',
-    imageUrl: '/Routie_tn.png',
+    imageUrl: '/routie_tn_v2.png',
     subImages: [
       '/routie_3_1.png'
     ],
@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
     role: 'UXUI Designer',
     keyPoints: '습관 형성 및 관리 서비스',
     link: '#',
-    imageUrl: '/Furzzle_tn.png',
+    imageUrl: '/furzzle_tn_v2.png',
     subImages: [
       '/furzzle_4_1.png'
     ],
