@@ -4,9 +4,9 @@ export const PROJECTS: Project[] = [
   {
     id: 'housewith',
     category: ProjectCategory.UXUI,
-    title: 'Housewith',
+    title: '하우스윗',
     role: 'PM · Product Designer',
-    keyPoints: 'Roommate Matching Platform',
+    keyPoints: 'Dorm-mate Matching Platform',
     link: '#',
     imageUrl: '/housewith_tn_v2.png',
     subImages: [
@@ -24,7 +24,7 @@ export const PROJECTS: Project[] = [
   {
     id: 'dental-u',
     category: ProjectCategory.UXUI,
-    title: 'Dental U',
+    title: '덴탈유',
     role: 'UX/UI Designer',
     keyPoints: 'Dental Care Service',
     link: '#',
@@ -44,9 +44,9 @@ export const PROJECTS: Project[] = [
   {
     id: 'routie',
     category: ProjectCategory.UXUI,
-    title: 'Routie',
+    title: '루티',
     role: 'PM · Product Designer',
-    keyPoints: 'Schedule & Routine Management',
+    keyPoints: 'Schedule & Routine Manager',
     link: '#',
     imageUrl: '/routie_tn_v2.png',
     subImages: [
@@ -64,9 +64,9 @@ export const PROJECTS: Project[] = [
   {
     id: 'furzzle',
     category: ProjectCategory.UXUI,
-    title: 'Furzzle',
+    title: '퍼즐',
     role: 'UX/UI Designer',
-    keyPoints: 'Habit Forming & Management',
+    keyPoints: 'Habit Tracker',
     link: '#',
     imageUrl: '/furzzle_tn_v2.png',
     subImages: [
