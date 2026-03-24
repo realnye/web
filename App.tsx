@@ -152,7 +152,7 @@ const Hero: React.FC = () => {
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            Naeui
+            NAEUI
           </motion.h1>
         </div>
 
@@ -165,7 +165,7 @@ const Hero: React.FC = () => {
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           >
-            Yi
+            YI
           </motion.h1>
         </div>
       </div>
@@ -403,7 +403,7 @@ const Footer = () => {
   return (
     <footer className="py-12 px-6 md:px-12 bg-[#FFFFFE] border-t border-zinc-100">
       <div className="max-w-[1800px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-sm font-normal tracking-tight text-zinc-400">© YI NAEUI</p>
+        <p className="text-sm font-normal tracking-tight text-zinc-400">© yi naeui</p>
         <p className="text-sm font-normal tracking-tight text-zinc-400">uxui design archive</p>
       </div>
     </footer>
