@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter, Link, useLocation } from 'react-router-dom';
 import { X, ArrowUpRight, ArrowRight } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import { PROJECTS } from './constants';
 import { ProjectCategory } from './types';
 
@@ -475,6 +476,7 @@ const App: React.FC = () => {
           onClose={() => setIsDetailOpen(false)} 
         />
       </div>
+      <Analytics />
     </HashRouter>
   );
 };
