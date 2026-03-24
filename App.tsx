@@ -152,7 +152,7 @@ const Hero: React.FC = () => {
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
           >
-            NAEUI
+            Naeui
           </motion.h1>
         </div>
 
@@ -165,7 +165,7 @@ const Hero: React.FC = () => {
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
           >
-            YI
+            Yi
           </motion.h1>
         </div>
       </div>
