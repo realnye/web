@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+/* Hyundai Sans Head */
+@font-face {
+  font-family: 'HyundaiSansHead';
+  src: url('/fonts/HyundaiSansHeadOffice-Light.woff2') format('woff2'),
+       url('/fonts/HyundaiSansHeadOffice-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HyundaiSansHead';
+  src: url('/fonts/HyundaiSansHeadOffice-Regular.woff2') format('woff2'),
+       url('/fonts/HyundaiSansHeadOffice-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 @font-face {
   font-family: 'HyundaiSansHead';
   src: url('/fonts/HyundaiSansHeadOffice-Medium.woff2') format('woff2'),
@@ -9,11 +26,28 @@
   font-display: swap;
 }
 
+/* Hyundai Sans Text */
 @font-face {
-  font-family: 'HyundaiSansHead';
-  src: url('/fonts/HyundaiSansHeadOffice-Light.woff2') format('woff2'),
-       url('/fonts/HyundaiSansHeadOffice-Light.ttf') format('truetype');
-  font-weight: 300;
+  font-family: 'HyundaiSansText';
+  src: url('/fonts/HyundaiSansTextOffice-Regular.woff2') format('woff2'),
+       url('/fonts/HyundaiSansTextOffice-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HyundaiSansText';
+  src: url('/fonts/HyundaiSansTextOffice-Medium.woff2') format('woff2'),
+       url('/fonts/HyundaiSansTextOffice-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'HyundaiSansText';
+  src: url('/fonts/HyundaiSansTextOffice-Bold.woff2') format('woff2'),
+       url('/fonts/HyundaiSansTextOffice-Bold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
@@ -31,6 +65,10 @@
 }
 
 @layer components {
+  .font-hyundai {
+    font-family: 'HyundaiSansText', 'HyundaiSansHead', sans-serif;
+  }
+
   .text-huge {
     font-size: clamp(4rem, 16vw, 15rem);
     line-height: 0.95; 
