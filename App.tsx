@@ -1,10 +1,9 @@
 
 import React, { useState, useEffect } from 'react';
-import { HashRouter, Link, useLocation } from 'react-router-dom';
-import { X, ArrowUpRight, ArrowRight } from 'lucide-react';
+import { HashRouter, useLocation } from 'react-router-dom';
+import { X, ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { PROJECTS } from './constants';
-import { ProjectCategory } from './types';
 
 // Add global type definition for window.amplitude to fix TS errors
 declare global {
@@ -16,15 +15,6 @@ declare global {
     };
   }
 }
-
-// --- Helper Functions ---
-
-const scrollToSection = (id: string) => {
-  const element = document.getElementById(id);
-  if (element) {
-    element.scrollIntoView({ behavior: 'smooth' });
-  }
-};
 
 // --- Components ---
 
