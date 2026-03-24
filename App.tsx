@@ -236,12 +236,11 @@ const ProjectDetail: React.FC<{
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
                 <div className="space-y-12">
                   <div>
-                    <p className="text-detail text-zinc-400 mb-4">{project.category}</p>
                     <h2 className="text-4xl md:text-6xl font-bold tracking-tight leading-none mb-8 text-black">
                       {project.title}
                     </h2>
                     <div className="flex flex-wrap gap-4">
-                      <span className="px-4 py-2 bg-zinc-50 rounded-full text-xs font-bold uppercase tracking-widest border border-zinc-100 text-zinc-600">
+                      <span className="px-4 py-2 bg-zinc-50 rounded-full text-xs font-medium tracking-wide border border-zinc-100 text-zinc-600">
                         {project.role}
                       </span>
                     </div>
@@ -336,8 +335,8 @@ const ProjectCard: React.FC<{ project: any; onClick: () => void; className?: str
     </div>
     <div className="border-l-2 border-zinc-100 pl-5 group-hover:border-black transition-colors duration-500">
       <h3 className="text-xl font-bold mb-2 leading-tight">{project.title}</h3>
-      <p className="text-[10px] text-zinc-400 font-normal uppercase tracking-[0.2em]">{project.role}</p>
-      <p className="text-[10px] text-zinc-400 font-normal uppercase tracking-widest">{project.keyPoints}</p>
+      <p className="text-[10px] text-zinc-400 font-normal tracking-[0.1em]">{project.role}</p>
+      <p className="text-[10px] text-zinc-400 font-normal tracking-[0.1em]">{project.keyPoints}</p>
     </div>
   </motion.div>
 );
