@@ -187,14 +187,6 @@ const Hero: React.FC = () => {
         <p className="text-base md:text-lg font-normal text-[#888888] max-w-sm leading-relaxed">
           복잡한 것을 명확하게,<br />경험으로 설계합니다.
         </p>
-        <motion.div
-          className="flex flex-col items-center gap-2 text-zinc-300"
-          animate={{ y: [0, 6, 0] }}
-          transition={{ duration: 2.5, repeat: Infinity, ease: 'easeInOut' }}
-        >
-          <span className="text-[10px] tracking-[0.2em] uppercase font-normal">Scroll</span>
-          <div className="w-[1px] h-10 bg-zinc-200" />
-        </motion.div>
       </motion.div>
     </section>
   );
@@ -364,7 +356,7 @@ const Work: React.FC<{ onSelectProject: (project: any) => void }> = ({ onSelectP
   // 모바일: 세로 2열 그리드
   if (isMobile) {
     return (
-      <section className="border-t border-zinc-100 py-20 bg-[#FFFFFE]">
+      <section className="py-20 bg-[#FFFFFE]">
         {sectionHeader}
         <div className="px-6 grid grid-cols-2 gap-6">
           {PROJECTS.map((project) => (
@@ -381,7 +373,7 @@ const Work: React.FC<{ onSelectProject: (project: any) => void }> = ({ onSelectP
 
   // 데스크탑: 가로 스크롤 (스크롤 연동)
   return (
-    <section ref={targetRef} className="relative h-[300vh] border-t border-zinc-100">
+    <section ref={targetRef} className="relative h-[300vh]">
       <div className="sticky top-0 h-screen flex flex-col justify-center overflow-hidden bg-[#FFFFFE]">
         {sectionHeader}
         <div className="relative">
