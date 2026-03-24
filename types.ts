@@ -14,6 +14,7 @@ export interface Project {
   link: string;
   imageUrl: string;
   subImages?: string[];
+  contributions?: string[];
   description?: string;
   details?: string[];
 }

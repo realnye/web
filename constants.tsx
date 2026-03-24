@@ -12,6 +12,7 @@ export const PROJECTS: Project[] = [
     subImages: [
       '/housewith_1_1.png',
     ],
+    contributions: ['Wireframe', 'UX/UI', 'Prototype'],
     description: '잘 맞는 룸메를 위한 기숙사 룸메이트 매칭 플랫폼입니다. 정보 부족과 판단의 어려움을 해결하여 사용자가 직접 탐색하고 선택할 수 있는 구조를 제공합니다.',
     details: [
       '사용자 성향 설문 기반의 데이터화 및 간결한 온보딩 시스템 설계',
@@ -31,6 +32,7 @@ export const PROJECTS: Project[] = [
     subImages: [
       '/dentalu_2_1.png'
     ],
+    contributions: ['UX/UI'],
     description: '의료진과 환자 간의 상호작용에 대한 해결책을 제시하는 치아 관리 서비스입니다. 환자의 불안감을 완화하고 진료 전 필요한 정보를 한눈에 제공합니다.',
     details: [
       '환자 모니터링 개선 및 긍정적인 진료 경험을 위한 정보 구조(IA) 설계',
@@ -50,6 +52,7 @@ export const PROJECTS: Project[] = [
     subImages: [
       '/routie_3_1.png'
     ],
+    contributions: ['UI', 'Design system'],
     description: '학업, 대외활동, 자기관리를 병행하는 대학생들을 위한 일정 및 루틴 관리 솔루션입니다. 효율적이고 체계적인 시간 관리를 제안합니다.',
     details: [
       '루틴과 일정 탭 전환을 통한 시간대별 할 일 및 고정 스케줄 통합 관리',
@@ -69,6 +72,7 @@ export const PROJECTS: Project[] = [
     subImages: [
       '/furzzle_4_1.png'
     ],
+    contributions: ['UI', 'Design system'],
     description: '간편한 기록 방식과 개인 맞춤형 알림으로 지속 가능한 습관 형성을 돕는 서비스입니다. 개인화된 콘텐츠 제공을 통해 습관 유지를 유도합니다.',
     details: [
       '심층 인터뷰를 통한 페인포인트 분석 및 "개인화된 콘텐츠 제공" 솔루션 도출',

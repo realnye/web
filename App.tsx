@@ -248,6 +248,19 @@ const ProjectDetail: React.FC<{
                   </div>
 
                   <div className="space-y-8">
+                    {project.contributions && project.contributions.length > 0 && (
+                      <div>
+                        <h4 className="text-detail text-zinc-300 mb-3">Contribution</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {project.contributions.map((c: string, i: number) => (
+                            <span key={i} className="px-3 py-1 border border-zinc-200 rounded-full text-[11px] tracking-[0.1em] text-zinc-500 uppercase">
+                              {c}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     <div>
                       <h4 className="text-detail text-zinc-300 mb-4">Overview</h4>
                       <p className="text-xl text-zinc-800 font-bold leading-relaxed">
@@ -403,7 +416,7 @@ const Footer = () => {
   return (
     <footer className="py-12 px-6 md:px-12 bg-[#FFFFFE] border-t border-zinc-100">
       <div className="max-w-[1800px] mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
-        <p className="text-sm font-normal tracking-tight text-zinc-400">© yi naeui</p>
+        <p className="text-sm font-normal tracking-tight text-zinc-400">© naeui yi</p>
         <p className="text-sm font-normal tracking-tight text-zinc-400">uxui design archive</p>
       </div>
     </footer>
