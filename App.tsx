@@ -147,7 +147,7 @@ const Hero: React.FC = () => {
         <div className="overflow-hidden">
           <motion.h1
             className="text-[18vw] md:text-[16vw] tracking-[-0.02em] leading-[0.88] text-black"
-            style={{ fontFamily: "'HyundaiSansHead', sans-serif", fontWeight: 500 }}
+            style={{ fontFamily: "'HyundaiSansHead', sans-serif", fontWeight: 300 }}
             initial={{ y: '105%' }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
@@ -160,7 +160,7 @@ const Hero: React.FC = () => {
         <div className="overflow-hidden flex items-end justify-end">
           <motion.h1
             className="text-[18vw] md:text-[16vw] tracking-[-0.02em] leading-[0.88] text-black"
-            style={{ fontFamily: "'HyundaiSansHead', sans-serif", fontWeight: 500 }}
+            style={{ fontFamily: "'HyundaiSansHead', sans-serif", fontWeight: 300 }}
             initial={{ y: '105%' }}
             animate={{ y: 0 }}
             transition={{ duration: 1, delay: 0.45, ease: [0.16, 1, 0.3, 1] }}
