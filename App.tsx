@@ -55,7 +55,7 @@ const Marquee: React.FC = () => {
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         {repeated.map((item, i) => (
-          <span key={i} className="text-[11px] font-normal tracking-[0.2em] text-zinc-400 shrink-0">
+          <span key={i} className="text-[14px] font-normal tracking-[0.1em] text-zinc-400 shrink-0 font-hyundai">
             {item} <span className="text-zinc-200 mx-3">·</span>
           </span>
         ))}
