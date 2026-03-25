@@ -9,6 +9,7 @@ export const PROJECTS: Project[] = [
     keyPoints: 'Dorm-mate Matching Platform',
     link: '#',
     imageUrl: '/housewith_tn_v2.png',
+    detailImageUrl: '/housewith_1.png',
     subImages: [
       '/housewith_1_1.png',
     ],
@@ -29,6 +30,7 @@ export const PROJECTS: Project[] = [
     keyPoints: 'Dental Care Service',
     link: '#',
     imageUrl: '/dentalu_tn_v2.png',
+    detailImageUrl: '/dentalu_2.png',
     subImages: [
       '/dentalu_2_1.png'
     ],
@@ -49,6 +51,7 @@ export const PROJECTS: Project[] = [
     keyPoints: 'Schedule & Routine Manager',
     link: '#',
     imageUrl: '/routie_tn_v2.png',
+    detailImageUrl: '/routie_3.png',
     subImages: [
       '/routie_3_1.png'
     ],
@@ -69,6 +72,7 @@ export const PROJECTS: Project[] = [
     keyPoints: 'Habit Tracker',
     link: '#',
     imageUrl: '/furzzle_tn_v2.png',
+    detailImageUrl: '/furzzle_4.png',
     subImages: [
       '/furzzle_4_1.png'
     ],

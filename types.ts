@@ -13,6 +13,7 @@ export interface Project {
   keyPoints: string;
   link: string;
   imageUrl: string;
+  detailImageUrl?: string;
   subImages?: string[];
   contributions?: string[];
   description?: string;

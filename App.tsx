@@ -39,13 +39,19 @@ const Header: React.FC = () => {
 };
 
 const Marquee: React.FC = () => {
-  const items = ['Brand Identity', 'UXUI Design', 'Wireframing & Prototyping'];
-  const repeated = [...items, ...items, ...items, ...items, ...items, ...items];
+  const items = [
+    'Designing experiences from problem definition',
+    'Industrial design foundation expanded to UX/UI',
+    'Research-driven problem solving',
+    'Collaborating with developers to deliver MVPs',
+    'User Problem → Structure → Prototype',
+  ];
+  const repeated = [...items, ...items, ...items, ...items];
   return (
     <div className="relative overflow-hidden w-full border-t border-b border-zinc-100 py-3">
       <motion.div
         className="flex gap-12 whitespace-nowrap"
-        animate={{ x: ['0%', '-16.666%'] }}
+        animate={{ x: ['0%', '-25%'] }}
         transition={{ duration: 20, repeat: Infinity, ease: 'linear' }}
       >
         {repeated.map((item, i) => (
@@ -271,7 +277,7 @@ const ProjectDetail: React.FC<{
               {/* 메인 이미지 */}
               <div className="w-full rounded-2xl overflow-hidden bg-zinc-50 border border-zinc-100 mb-8">
                 <img
-                  src={project.imageUrl}
+                  src={project.detailImageUrl || project.imageUrl}
                   alt={project.title}
                   className="w-full h-auto object-contain"
                   referrerPolicy="no-referrer"
