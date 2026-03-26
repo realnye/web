@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { HashRouter, useLocation } from 'react-router-dom';
 import { X, ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
+import { Analytics } from '@vercel/analytics/react';
 import { PROJECTS } from './constants';
 
 // Add global type definition for window.amplitude to fix TS errors
@@ -469,6 +470,7 @@ const App: React.FC = () => {
           onClose={() => setIsDetailOpen(false)} 
         />
       </div>
+      <Analytics />
     </HashRouter>
   );
 };
